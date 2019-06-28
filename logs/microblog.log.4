@@ -1,0 +1,79 @@
+2019-06-26 11:34:26,671 ERROR: Exception on /user/susan [GET] [in /Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py:1780]
+Traceback (most recent call last):
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/isaialegria/coding_projects/flask/microblog/app/routes.py", line 71, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/isaialegria/coding_projects/flask/microblog/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/isaialegria/coding_projects/flask/microblog/app/templates/base.html", line 30, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/isaialegria/coding_projects/flask/microblog/app/templates/user.html", line 15, in block "content"
+    <p><a href="{{ url_for('follow', username=user.username) }}">Follow</a></p>
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 2080, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/werkzeug/routing.py", line 2007, in build
+    raise BuildError(endpoint, values, method, self)
+BuildError: Could not build url for endpoint 'follow' with values ['username']. Did you mean 'login' instead?
+2019-06-26 11:44:09,689 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:44]
+2019-06-26 11:44:33,768 ERROR: Exception on /user/susan [GET] [in /Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py:1780]
+Traceback (most recent call last):
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/isaialegria/coding_projects/flask/microblog/app/routes.py", line 71, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/isaialegria/coding_projects/flask/microblog/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/isaialegria/coding_projects/flask/microblog/app/templates/base.html", line 30, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/isaialegria/coding_projects/flask/microblog/app/templates/user.html", line 15, in block "content"
+    <p><a href="{{ url_for('follow', username=user.username) }}">Follow</a></p>
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 2080, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/werkzeug/routing.py", line 2007, in build
+    raise BuildError(endpoint, values, method, self)
+BuildError: Could not build url for endpoint 'follow' with values ['username']. Did you mean 'login' instead?
