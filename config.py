@@ -19,3 +19,5 @@ class Config(object):
 
     #Pagination Config
     POSTS_PER_PAGE = 3
+
+    LANGUAGES = ['en','es']
