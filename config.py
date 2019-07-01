@@ -16,6 +16,7 @@ class Config(object):
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS = ['eesighee@gmail.com']
+    MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
 
     #Pagination Config
     POSTS_PER_PAGE = 3
