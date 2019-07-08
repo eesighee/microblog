@@ -1,72 +1,86 @@
-2019-06-26 12:12:41,563 ERROR: Exception on /user/susan [GET] [in /Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py:1780]
+2019-07-08 09:00:54,435 ERROR: Exception on /explore [GET] [in /home/eesighee/.local/lib/python2.7/site-packages/flask/app.py:1780]
 Traceback (most recent call last):
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/app.py", line 2311, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/app.py", line 1818, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/isaialegria/coding_projects/flask/microblog/app/routes.py", line 72, in user
-    return render_template('user.html', user=user, posts=posts)
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/templating.py", line 135, in render_template
-    context, ctx.app)
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/templating.py", line 117, in _render
-    rv = template.render(context)
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/jinja2/environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/jinja2/environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/isaialegria/coding_projects/flask/microblog/app/templates/user.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/Users/isaialegria/coding_projects/flask/microblog/app/templates/base.html", line 30, in top-level template code
-    {% block content %}{% endblock %}
-  File "/Users/isaialegria/coding_projects/flask/microblog/app/templates/user.html", line 15, in block "content"
-    <p><a href="{{ url_for('follow', username=user.username) }}">Follow</a></p>
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/helpers.py", line 356, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 2080, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/helpers.py", line 345, in url_for
-    force_external=external)
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/werkzeug/routing.py", line 2007, in build
-    raise BuildError(endpoint, values, method, self)
-BuildError: Could not build url for endpoint 'follow' with values ['username']. Did you mean 'login' instead?
-2019-06-26 12:18:22,384 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:44]
-2019-06-26 22:15:55,813 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:46]
-2019-06-27 12:30:46,936 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:46]
-2019-06-27 12:46:43,179 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:46]
-2019-06-27 12:47:47,250 ERROR: Exception on /reset_password_request [POST] [in /Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py:1780]
+  File "/mnt/c/Users/eesig/Documents/GitHub/microblog/app/main/routes.py", line 100, in explore
+    page, app.config['POSTS_PER_PAGE'], False)
+NameError: global name 'app' is not defined
+2019-07-08 09:01:53,094 INFO: Micrblog startup [in /mnt/c/Users/eesig/Documents/GitHub/microblog/app/__init__.py:70]
+2019-07-08 09:01:57,176 ERROR: Exception on /explore [GET] [in /home/eesighee/.local/lib/python2.7/site-packages/flask/app.py:1780]
 Traceback (most recent call last):
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/app.py", line 2311, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/app.py", line 1818, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/isaialegria/coding_projects/flask/microblog/app/routes.py", line 146, in reset_password_request
-    send_password_reset_email(user)
-  File "/Users/isaialegria/coding_projects/flask/microblog/app/email.py", line 17, in send_password_reset_email
-    text_body=redner_template('email/reset_password.txt',
-NameError: global name 'redner_template' is not defined
-2019-06-27 12:48:49,800 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:46]
-2019-06-27 12:54:37,129 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:46]
-2019-06-27 13:00:59,047 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:46]
-2019-06-27 13:14:45,655 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:46]
-2019-06-27 13:15:36,259 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:46]
-2019-06-27 13:22:53,686 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:46]
-2019-06-27 13:24:44,742 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:46]
-2019-06-27 13:31:15,265 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:46]
-2019-06-27 13:39:17,819 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:46]
-2019-06-27 15:18:19,778 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:46]
-2019-06-27 16:45:51,497 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:48]
-2019-06-27 19:15:24,456 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:50]
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/mnt/c/Users/eesig/Documents/GitHub/microblog/app/main/routes.py", line 101, in explore
+    next_url = url_for('explore', page=posts.next_num) if posts.has_next else None
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/app.py", line 2080, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/home/eesighee/.local/lib/python2.7/site-packages/werkzeug/routing.py", line 2007, in build
+    raise BuildError(endpoint, values, method, self)
+BuildError: Could not build url for endpoint 'explore' with values ['page']. Did you mean 'main.explore' instead?
+2019-07-08 09:03:11,688 INFO: Micrblog startup [in /mnt/c/Users/eesig/Documents/GitHub/microblog/app/__init__.py:70]
+2019-07-08 09:03:46,728 ERROR: Exception on /auth/register [GET] [in /home/eesighee/.local/lib/python2.7/site-packages/flask/app.py:1780]
+Traceback (most recent call last):
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/c/Users/eesig/Documents/GitHub/microblog/app/auth/routes.py", line 46, in register
+    return render_template('auth/register.html', title=_('Register'), form=form)
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/home/eesighee/.local/lib/python2.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/eesighee/.local/lib/python2.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/mnt/c/Users/eesig/Documents/GitHub/microblog/app/templates/auth/register.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/mnt/c/Users/eesig/Documents/GitHub/microblog/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/eesighee/.local/lib/python2.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/mnt/c/Users/eesig/Documents/GitHub/microblog/app/templates/base.html", line 48, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/mnt/c/Users/eesig/Documents/GitHub/microblog/app/templates/auth/register.html", line 7, in block "app_content"
+    {{ wtf.quick_form(form) }}
+  File "/home/eesighee/.local/lib/python2.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'wtf' is undefined
+2019-07-08 09:13:53,779 INFO: Micrblog startup [in /mnt/c/Users/eesig/Documents/GitHub/microblog/app/__init__.py:70]

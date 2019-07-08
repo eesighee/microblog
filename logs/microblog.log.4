@@ -1,4 +1,4 @@
-2019-06-26 11:34:26,671 ERROR: Exception on /user/susan [GET] [in /Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py:1780]
+2019-06-26 11:51:09,238 ERROR: Exception on /user/susan [GET] [in /Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py:1780]
 Traceback (most recent call last):
   File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 2311, in wsgi_app
     response = self.full_dispatch_request()
@@ -37,8 +37,9 @@ Traceback (most recent call last):
   File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/werkzeug/routing.py", line 2007, in build
     raise BuildError(endpoint, values, method, self)
 BuildError: Could not build url for endpoint 'follow' with values ['username']. Did you mean 'login' instead?
-2019-06-26 11:44:09,689 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:44]
-2019-06-26 11:44:33,768 ERROR: Exception on /user/susan [GET] [in /Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py:1780]
+2019-06-26 12:02:35,140 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:44]
+2019-06-26 12:12:13,832 INFO: Micrblog startup [in /Users/isaialegria/coding_projects/flask/microblog/app/__init__.py:44]
+2019-06-26 12:12:41,049 ERROR: Exception on /user/susan [GET] [in /Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py:1780]
 Traceback (most recent call last):
   File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/app.py", line 2311, in wsgi_app
     response = self.full_dispatch_request()
@@ -52,7 +53,7 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/isaialegria/coding_projects/flask/microblog/app/routes.py", line 71, in user
+  File "/Users/isaialegria/coding_projects/flask/microblog/app/routes.py", line 72, in user
     return render_template('user.html', user=user, posts=posts)
   File "/Users/isaialegria/coding_projects/flask/microblog/venv/lib/python2.7/site-packages/flask/templating.py", line 135, in render_template
     context, ctx.app)
